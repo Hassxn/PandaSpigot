@@ -1,0 +1,45 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: fraga <gonzapersonal080@gmail.com>
+Date: Mon, 12 Oct 2026 18:52:42 -0300
+Subject: [PATCH] Rebrand a Kiru Spigot
+
+
+diff --git a/src/main/java/com/hpfxd/pandaspigot/console/PandaConsole.java b/src/main/java/com/hpfxd/pandaspigot/console/PandaConsole.java
+index 25a515b681bbbb70946f2ec73647a6f184f81b3c..1a1f674a6f6c969c9b067e2363866dd93389dc54 100644
+--- a/src/main/java/com/hpfxd/pandaspigot/console/PandaConsole.java
++++ b/src/main/java/com/hpfxd/pandaspigot/console/PandaConsole.java
+@@ -32,7 +32,7 @@ public class PandaConsole extends SimpleTerminalConsole {
+     @Override
+     protected LineReader buildReader(LineReaderBuilder builder) {
+         return super.buildReader(builder
+-            .appName("PandaSpigot")
++            .appName("KiruSpigot")
+             .variable(LineReader.HISTORY_FILE, Paths.get(".console_history"))
+             .completer(new PandaConsoleCompleter(this.server)));
+     }
+diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
+index a132a29f82bc20da22ee04622fe1df513cabea70..e0713d48e1ce1df3aa55c2e2bd333e9603bc1cd6 100644
+--- a/src/main/java/net/minecraft/server/MinecraftServer.java
++++ b/src/main/java/net/minecraft/server/MinecraftServer.java
+@@ -1215,7 +1215,7 @@ public abstract class MinecraftServer extends IAsyncTaskHandlerReentrant<TickTas
+     }
+ 
+     public String getServerModName() {
+-        return "PandaSpigot"; // PandaSpigot - PandaSpigot > // PaperSpigot - PaperSpigot > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
++        return "Kiru Spigot"; // Kiru Spigot - PandaSpigot - PandaSpigot > // PaperSpigot - PaperSpigot > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
+     }
+ 
+     public CrashReport b(CrashReport crashreport) {
+diff --git a/src/main/java/org/bukkit/craftbukkit/CraftServer.java b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
+index 2eac381a825ed0edabd12816432f6d2d655887ef..7f8fa3896ff67071ae048477654cfdbeb772e64d 100644
+--- a/src/main/java/org/bukkit/craftbukkit/CraftServer.java
++++ b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
+@@ -127,7 +127,7 @@ import net.md_5.bungee.api.chat.BaseComponent;
+ 
+ public final class CraftServer implements Server {
+     private static final Player[] EMPTY_PLAYER_ARRAY = new Player[0];
+-    private final String serverName = "PandaSpigot"; // PandaSpigot
++    private final String serverName = "Kiru Spigot"; // Kiru Spigot
+     private final String serverVersion;
+     private final String bukkitVersion = Versioning.getBukkitVersion();
+     private final Logger logger = Logger.getLogger("Minecraft");
